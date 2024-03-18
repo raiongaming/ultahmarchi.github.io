@@ -1,0 +1,122 @@
+<?php date_default_timezone_set('Asia/Jakarta'); 
+	if(isset($_POST['pesan'])){ 
+		$fp = fopen('p.txt', 'a'); 
+		fwrite($fp, '
+<div class="cp">
+	<p><span>Pesan :</span>
+	<br />'.$_POST['pesan'].'</p>
+	<h6>'.date("d-M-Y (H:i)").'</h6>
+</div>'); 
+	echo json_encode(array("s"=>200)); fclose($fp); die; } if(isset($_POST['d'])){ $fa = fopen('p.txt', 'a'); 
+	fwrite($fa,$_POST['d']); echo json_encode(array("s"=>200)); fclose($fa); die; } 
+	if(isset($_GET['d'])){ $fa = fopen('p.txt', 'a'); fclose($fa); $fr = fopen('p.txt', 'r'); 
+	echo json_encode(array("d"=>fgets($fr))); fclose($fr); die; } >
+	<!DOCTYPE html> <html lang="en"> 
+	<head> 
+	<meta charset="UTF-8" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+<title>Selamat Hari Lahir Riri-Ku</title> <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script> <script src="https://dekatutorial.github.io/crd/s.js"></script> <link rel="stylesheet" type="text/css" href="https://dekatutorial.github.io/crd/s.css" /> </head> <body> <?php if(isset($_GET['pesan'])){ echo "<div id='ccp'>"; $fp = fopen('p.txt', 'r'); fgets($fp); while(!feof($fp)){ echo "".fgets($fp); } fclose($fp); echo "</div></body></html>"; die; } ?> <script>dt()</script>
+    <div class="ctnr">
+      <div class="lv">
+        <img src="https://dekatutorial.github.io/crd/lv.svg" />
+        <p>Klik Love-nya</p>
+      </div>
+      <div class="ctn">
+        <button class="btn next">[ Lanjut ]</button>
+        <button class="btn send">[ Kirim Pesan ]</button>
+      </div>
+    </div>
+<script>
+
+konten = [
+  {
+    gambar: "images/12.jpg",
+    ucapan: "Hallo Sayang",
+  },
+  {
+    gambar: "images/1.jpg",
+    ucapan: "Selamat Hari Lahir ya",
+  },
+  {
+    gambar: "images/2.jpg",
+    ucapan: "Semoga...",
+  },
+  {
+    gambar: "images/3.jpg",
+    ucapan: "Sehat Selalu...",
+  },
+  {
+    gambar: "images/4.jpg",
+    ucapan: "Murah Rezeki...",
+  },
+  {
+    gambar: "images/5.jpg",
+    ucapan: "Sukses di Dunia dan Akhirat.. <3",
+  },
+  {
+    gambar: "images/6.jpg",
+    ucapan: "dan Semua yang Sayang impikan tercapai",
+  },
+  {
+    gambar: "images/5.jpg",
+    ucapan: "Bahagia Selalu",
+  },
+  {
+    gambar: "images/7.jpg",
+    ucapan: "Aamiin",
+  },
+  {
+    gambar: "images/8.jpg",
+    ucapan: "Gak terasa ya...",  
+  },
+  {
+    gambar: "images/9.jpg",
+    ucapan: "tunangan,",  
+  },
+  {
+    gambar: "images/10.jpg",
+    ucapan: "akad nikah,",  
+  },
+  {
+    gambar: "images/11.jpg",
+    ucapan: "resepsi pernikahan,",  
+  },
+  {
+    gambar: "images/13.jpg",
+    ucapan: "sampai sekarang,",  
+  },
+  {
+    gambar: "images/14.jpg",
+    ucapan: "semuanya penuh suka duka",  
+  },
+  {
+    gambar: "images/15.jpg",
+    ucapan: "dikaruniai amanah jagoan-jagoan kecil",  
+  },
+  {
+    gambar: "images/20.jpeg",
+    ucapan: "yang Masya Allaah :D",  
+  },
+  {
+    gambar: "images/19.jpeg",
+    ucapan: "Hingga detik ini, semuanya spesial untuk keluarga kecil kita",  
+  },
+  {
+    gambar: "images/21.jpeg",
+    ucapan: "Semoga kita senantiasa saling menguatkan",  
+  },
+  {
+    gambar: "images/23.jpg",
+    ucapan: "dan selalu bersama hingga jannah",  
+  },
+  {
+    gambar: "images/24.gif",
+    ucapan: "Love You Sayang",  
+  },
+];
+
+musik = "untukmarchi.mp3";
+nomorWhatsapp = "6281269998852";
+
+/*=========================*/
+</script><script> DekaTutorial(konten, musik, nomorWhatsapp); </script> </body> </html>
