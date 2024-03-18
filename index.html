@@ -1,17 +1,4 @@
-<?php date_default_timezone_set('Asia/Jakarta'); 
-	if(isset($_POST['pesan'])){ 
-		$fp = fopen('p.txt', 'a'); 
-		fwrite($fp, '
-<div class="cp">
-	<p><span>Pesan :</span>
-	<br />'.$_POST['pesan'].'</p>
-	<h6>'.date("d-M-Y (H:i)").'</h6>
-</div>'); 
-	echo json_encode(array("s"=>200)); fclose($fp); die; } if(isset($_POST['d'])){ $fa = fopen('p.txt', 'a'); 
-	fwrite($fa,$_POST['d']); echo json_encode(array("s"=>200)); fclose($fa); die; } 
-	if(isset($_GET['d'])){ $fa = fopen('p.txt', 'a'); fclose($fa); $fr = fopen('p.txt', 'r'); 
-	echo json_encode(array("d"=>fgets($fr))); fclose($fr); die; } >
-	<!DOCTYPE html> <html lang="en"> 
+<!DOCTYPE html> <html lang="en"> 
 	<head> 
 	<meta charset="UTF-8" /> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
